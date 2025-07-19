@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>create folder</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>create a new folder</h1>
+
+    <form action="/folders/create" method="POST">
+      <label for="name">folder name:</label>
+      <input type="text" name="name" id="name" required />
+      <button type="submit">create</button>
+    </form>
+
+    <p><a href="/folders">back to folders</a></p>
+  </body>
+</html>
