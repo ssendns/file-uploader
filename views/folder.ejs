@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= folder.name %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>folder: <%= folder.name %></h1>
+
+    <p><a href="/folders/<%= folder.id %>/files/upload">upload a file</a></p>
+
+    <% if (folder.files.length === 0) { %>
+    <p>no files in this folder yet</p>
+    <% } else { %>
+    <ul>
+      <% folder.files.forEach(file => { %>
+      <li>
+        <a href="<%= file.url %>" download><%= file.name %></a>
+        (<%= file.size %> bytes)
+
+        <form
+          action="/folders/<%= folder.id %>/files/<%= file.id %>/delete"
+          method="POST"
+          style="display: inline"
+        >
+          <button type="submit">delete</button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+    <% } %>
+
+    <p><a href="/folders">back to folders</a></p>
+  </body>
+</html>

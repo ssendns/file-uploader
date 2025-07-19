@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>upload file</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>upload file to folder</h1>
+
+    <form
+      action="/folders/<%= folderId %>/files/upload"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="file">choose file:</label>
+      <input type="file" name="file" id="file" required />
+
+      <button type="submit">upload</button>
+    </form>
+
+    <p><a href="/folders/<%= folderId %>">back to folder</a></p>
+  </body>
+</html>
