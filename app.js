@@ -6,6 +6,7 @@ const passport = require("passport");
 require("./config/passport");
 
 const authRouter = require("./routes/authRouter");
+const foldersRouter = require("./routes/foldersRouter");
 
 const app = express();
 const PORT = 3000;
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/", authRouter);
+app.use("/folders", foldersRouter);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);
