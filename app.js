@@ -7,6 +7,7 @@ require("./config/passport");
 
 const authRouter = require("./routes/authRouter");
 const foldersRouter = require("./routes/foldersRouter");
+const filesRouter = require("./routes/filesRouter");
 
 const app = express();
 const PORT = 3000;
@@ -21,7 +22,7 @@ app.use(
   session({
     secret: process.env.SECRET,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
   })
 );
 
@@ -33,8 +34,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", authRouter);
+app.use("/folders/:folderId/files", filesRouter);
 app.use("/folders", foldersRouter);
+app.use("/", authRouter);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);
