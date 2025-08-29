@@ -24,7 +24,7 @@
 
 ---
 
-## what I Learned
+## what I learned
 
 - how to build multi-page apps using EJS
 - handling file uploads and saving metadata
