@@ -1,8 +1,6 @@
 # file-uploader
 
-**file-uploader** is a simple fullstack app built with **Express + EJS** for uploading and managing files. it includes **authentication**, **session handling**, and clean **EJS templates** for the frontend. while the project is intentionally minimal, it demonstrates key backend concepts like file handling with `multer`, secure login with `passport`, and using `Prisma` ORM for data persistence.
-
----
+**file-uploader** is a simple fullstack application built with Express + EJS for uploading and managing files. It features user authentication, session handling, and clean server-rendered views using EJS. While intentionally minimal, this project demonstrates key backend concepts: file handling with multer, secure login with passport, and data persistence via Prisma.
 
 ## features
 
@@ -12,8 +10,6 @@
 - session management with `express-session`
 - Prisma + Postgres for storage
 
----
-
 ## tech stack
 
 - **backend**: Node.js + Express
@@ -21,8 +17,6 @@
 - **DB**: Prisma ORM
 - **view engine**: EJS
 - **file uploads**: multer
-
----
 
 ## what I learned
 
@@ -33,4 +27,4 @@
 
 ---
 
-i am currently building out my portfolio — learning fast, building fast, and refining my craft every day. if this project speaks to you, feel free to [connect with me](https://github.com/ssendns). i am always open to collaborating on cool, meaningful projects.
+If this project speaks to you, feel free to [connect with me](https://github.com/ssendns). I am always open to collaborating on cool, meaningful projects.
